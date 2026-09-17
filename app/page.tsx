@@ -10,8 +10,7 @@ type Gift = {
   emoji: string
   color: number
   sort_order: number
-  ? <span className="card-status">Занято</span>
-: string | null
+  claimed_by: string | null
   claimed_at: string | null
 }
 
@@ -191,7 +190,7 @@ export default function Home() {
                 <div className="card-title">{g.name}</div>
                 <div className="card-desc">{g.description}</div>
                 {claimed
-                  ? <span className="card-status">Занято · {g.claimed_by}</span>
+                  ? <span className="card-status">Занято</span>
                   : <span className="card-status free">Можно выбрать</span>}
               </div>
             )
