@@ -10,7 +10,8 @@ type Gift = {
   emoji: string
   color: number
   sort_order: number
-  claimed_by: string | null
+  ? <span className="card-status">Занято</span>
+: string | null
   claimed_at: string | null
 }
 
